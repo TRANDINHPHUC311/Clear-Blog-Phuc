@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Header() {
     return (
@@ -12,15 +13,22 @@ export default function Header() {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarResponsive">
                         <ul className="navbar-nav ms-auto py-4 py-lg-0">
-                            <li className="nav-item"><a className="nav-link px-lg-3 py-3 py-lg-4" href="index.html">Home</a></li>
-                            <li className="nav-item"><a className="nav-link px-lg-3 py-3 py-lg-4" href="about.html">About</a></li>
-                            <li className="nav-item"><a className="nav-link px-lg-3 py-3 py-lg-4" href="post.html">Sample Post</a></li>
-                            <li className="nav-item"><a className="nav-link px-lg-3 py-3 py-lg-4" href="contact.html">Contact</a></li>
+                            <Link to="/">
+                                <li className="nav-item"><a className="nav-link px-lg-3 py-3 py-lg-4" >Home</a></li>
+                            </Link>
+                            <Link to="/about">
+                                <li className="nav-item"><a className="nav-link px-lg-3 py-3 py-lg-4" href="/#">About</a></li>
+                            </Link>
+                            <Link to="/post">
+                                <li className="nav-item"><a className="nav-link px-lg-3 py-3 py-lg-4" href="/#">Sample Post</a></li>
+                            </Link>
+                            <Link to="/contact">
+                                <li className="nav-item"><a className="nav-link px-lg-3 py-3 py-lg-4" href="/#">Contact</a></li>
+                            </Link>
                         </ul>
                     </div>
                 </div>
             </nav>
-
         </div>
     );
 }
